@@ -37,7 +37,8 @@ public class ProductRepository {
     }
 
     public Flux<Product> findByIds(List<String> ids) {
-        return Flux.fromIterable(ids)
+        return Mono.just(ids)
+            .flatMapIterable(list -> list)
             .flatMap(this::findById);
     }
 
