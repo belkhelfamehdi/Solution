@@ -1,12 +1,12 @@
 package com.ynov.reactivepipeline;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import io.quarkus.runtime.Quarkus;
+import io.quarkus.runtime.annotations.QuarkusMain;
 
-@SpringBootApplication
+@QuarkusMain
 public class ReactivePipelineApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ReactivePipelineApplication.class, args);
+        Quarkus.run(args);
     }
 }

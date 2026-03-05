@@ -23,16 +23,21 @@ import com.ynov.reactivepipeline.model.Product;
 import com.ynov.reactivepipeline.model.ProductWithPrice;
 import com.ynov.reactivepipeline.repository.ProductRepository;
 
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.core.scheduler.Schedulers;
 
+@ApplicationScoped
 public class OrderService {
 
     private static final Logger logger = LoggerFactory.getLogger(OrderService.class);
 
     private final ProductRepository productRepository;
 
+    @Inject
     public OrderService(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }

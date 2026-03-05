@@ -9,9 +9,12 @@ import java.util.function.Predicate;
 
 import com.ynov.reactivepipeline.model.Product;
 
+import jakarta.enterprise.context.ApplicationScoped;
+
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+@ApplicationScoped
 public class ProductRepository {
 
     private final Map<String, Product> productStore = Map.of(

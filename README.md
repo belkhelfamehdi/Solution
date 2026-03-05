@@ -36,3 +36,9 @@ La methode `processOrder(OrderRequest request)` de `OrderService` applique les e
 ```bash
 mvn test
 ```
+
+## Lancer l'application (Quarkus)
+
+```bash
+mvn quarkus:dev
+```
